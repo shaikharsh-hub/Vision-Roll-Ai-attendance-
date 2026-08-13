@@ -27,7 +27,7 @@ def style_background_dashboard():
         
         <style>   
             .stApp{
-            background: #5A5FEF
+            background: #FFB6C1
 }
         </style>
 
@@ -57,50 +57,53 @@ def style_base_layout():
                 }
 
                 
-               h1 {
-                   font-family: 'Climate Crisis',sans-serif !important;
-                   font-size: 3.5rem !important;
+                h1 {
+                    font-family: 'Climate Crisis',sans-serif !important;
+                    font-size: 3.5rem !important;
+                    line-heigth:1.1 !important;
+                    margin-bottom: 0rem !important;
+                    }
+
+                h2 {
+                    font-family: 'Inter',sans-serif !important;
+                    color: #000000 !important;
+                    font-size: 2rem !important;
                    line-heigth:1.1 !important;
-                   margin-bottom: 0rem !important;
+                    margin-bottom: 0rem !important;
+                    }                   
+                 
+                h3,h4,p {
+                    font-family: 'Outfit',sans-serif !important;
                    }
 
-               h2 {
-                   font-family: 'Inter',sans-serif !important;
-                   color: #000000 !important;
-                   font-size: 2rem !important;
-                   line-heigth:1.1 !important;
-                   margin-bottom: 0rem !important;
-                   }                   
-                
-               h3,h4,p {
-                   font-family: 'Outfit',sans-serif !important;
-                   }
 
-               /* All Streamlit buttons */
-                .stButton > button {
-                    background: #FFD400 !important;
-                    color: #000000 !important;
-                    border: none !important;
-                    border-radius: 1.5rem !important;
-                    padding: 0.75rem 1.5rem !important;
-                    font-weight: 600 !important;
-                    transition: all 0.3s ease;
+                /* Primary button */
+                div[data-testid="stButton"] > button[kind="primary"]{
+                    background-color:#FFD400 !important;
+                    color:black !important;
+                    border:none !important;
+                    transition: all 0.3s ease !important;
                 }
 
-                /* Button text */
-                .stButton > button p,
-                .stButton > button span,
-                .stButton > button div {
-                    color: #000000 !important;
-                }
-
-                /* Hover */
-                .stButton > button:hover {
+                div[data-testid="stButton"] > button[kind="primary"]:hover{
+                    background-color:#FFC800 !important;
+                    color:black !important;
                     transform: translateY(-2px);
-                    background: #FFC800 !important;
                 }
 
+                /* Secondary button */
+                div[data-testid="stButton"] > button[kind="secondary"]{
+                    background-color:#000000 !important;
+                    color:white !important;
+                    border:none !important;
+                    transition: all 0.3s ease !important;
+                }
 
+                div[data-testid="stButton"] > button[kind="secondary"]:hover{
+                    background-color:#222222 !important;
+                    color:white !important;
+                    transform: translateY(-2px);
+                }                
         </style>
 
 

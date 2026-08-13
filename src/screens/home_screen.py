@@ -15,7 +15,7 @@ def home_screen():
     with col1:
         st.header("I am Student")
         st.image("assets/student.png")
-        if st.button('Student portal'):
+        if st.button('Student portal',type='primary'):
             st.session_state['login_type'] = 'student'
             st.rerun()
 
@@ -23,8 +23,8 @@ def home_screen():
 
         st.header("I am Teacher")
         st.image("assets/teacher.png")
-        if st.button('Teacher portal'):
-            st.session_state['login_type'] = 'student'
+        if st.button('Teacher portal', type='primary'):
+            st.session_state['login_type'] = 'teacher'
             st.rerun()
 
 
